@@ -3,6 +3,8 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background:url(../IMG/back.jpg);
+    height:100%;
+    width:100%;
 }
 
 .rainbow {
@@ -27,7 +29,7 @@ body {
 .rainbow {
     position: relative;
     z-index: 0;
-    width: 400px;
+    width: 60vw;
     height: 300px;
     border-radius: 10px;
     overflow: hidden;
