@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stop Timer</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <div class="rainbow">
+        <div id="timer">00:00:00</div>
+        <div class="btn">
+            <button id="startButton" onclick="startTimer()">Start</button>
+            <button id="stopButton" onclick="stopTimer()">Stop</button>
+        </div>
+    </div>
+    <script>
+        let timerInterval;
+        let seconds = 0;
+        let minutes = 0;
+        let hours = 0;
+
+        function startTimer() {
+            timerInterval = setInterval(updateTimer, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+
+        function updateTimer() {
+            seconds++;
+            if (seconds === 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes === 60) {
+                    minutes = 0;
+                    hours++;
+                }
+            }
+
+            const formattedTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('timer').innerText = formattedTime;
+        }
+    </script>
+</body>
+
+</html>
