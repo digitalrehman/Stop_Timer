@@ -3,6 +3,9 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background:url(../IMG/back.jpg);
+    background-repeat : no-repeat;
+    background-size : cover;
+    background-position : center;
     height:100%;
     width:100%;
 }
